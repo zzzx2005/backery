@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <mata http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title></title>
+        </mata>
+        <!--font awesome cdn link -->
+
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!--custom css file link -->
+
+<link rel="stylesheet"href="style.css">
+    </head>
+    <body>
+<!--header section starts -->
+
+<header class="header">
+
+    <a href="#home"class="logo">
+    
+    <img src="img/logo.png"alt="">
+    
+    </a>
+    
+    <nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#about">about</a>
+    <a href="#cakes">cakes</a>
+    <a href="#pastry">pastry</a>
+    <a href="#review">review</a>
+    <a href="#contact">contact</a>
+    <a href="#blogs">blogs</a>
+    </nav>
+    <div class="icons">
+        <div class="fas fa-search"id="search-btn"></div>
+        <div class="fas fa-shopping-cart"id="cart-btn"></div>
+        <div class="fas fa-bars"id="menu-btn"></div>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search" onclick="search()"></label>
+        </div>
+        <div class="cart-items-container">
+            <div id="cart-items-container">
+                <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="img/1.jpg"alt="">
+                <div class="content">
+                <h3>cart item 01</h3>
+                <div class="price">$52.99/</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="img/3.jpg"alt="">
+                <div class="content">
+                    <h3>cart item 02</h3>
+                    <div class="price">$52.99/</div>
+                </div>
+            </div>
+            </div>
+            <p>Total price: <span id="totalPrice">0</span> $</p>
+            <a onclick="removeFromCart2()" class="btn">checkout now</a>
+        </div>
+</header>
+        <!--header section ends -->
+<!--home section starts-->
+<section class="home" id="home">
+    <div class="content">
+        <h3>savoring sweet surprise</h3>
+        <p>Enjoy warmest baked products to greet a new day!  
+            Pick tasty ingredients to bake a happy life!
+        </p>
+        <a href="#cakes" class="btn">get yours now</a>
+    </div>
+</section>
+<!--home section ends-->
+<!--about section starts-->
+<section class="about" id="about">
+<h1 class="heading"><span>about</span> us</h1>
+<div class="row">
+    <div class="image">
+        <img src="img/49c29207a029ae2198ceb1d491a6145.jpg" alt="">
+    </div>
+    <div class="content">
+        <h3>creative concept</h3>
+        <p>The most beautiful sweetness is not only the sweetness of the tip of the tongue, but also the softness of the heart. Warm yourself. Others thank everyone we meet for the beauty brought by our daily life. Through a small cake, more happiness and satisfaction.</p>
+        <p>Every temptation of taste buds is a favourite cry.
+
+            Every call in the heart is an exchange of hearts.</p>
+        <a href="#" class="btn">learn more</a>
+    </div>
+</div>
+</section>
+<!--about section ends-->
+<!--cakes section starts-->
+<section class="cakes" id="cakes">
+    <h1 class="heading"> our <span>cakes</span></h1>
+<div class="box-container">
+  <div class="box">
+    <img src="img/1.jpg" alt="">
+    <h3>Confession</h3>  
+    <div class="price">$52.99 <span>99.99</span></div>   
+    <a class="btn" onclick="addToCart(1,1,52.99)">add to cart</a>
+</div>
+<div class="box">
+    <img src="img/2.jpg" alt="">
+    <h3>Brown Bear</h3>  
+    <div class="price">$52.99 <span>79.99</span></div>   
+    <a onclick="addToCart(2,1,52.99)" class="btn">add to cart</a>
+</div>
+<div class="box">
+    <img src="img/3.jpg" alt="">
+    <h3>See The Mountain</h3>  
+    <div class="price">$52.99 <span>89.99</span></div>   
+    <a onclick="addToCart(3,1,52.99)" class="btn">add to cart</a>
+</div>
+<div class="box">
+    <img src="img/4.jpg" alt="">
+    <h3>Dreaming</h3>  
+    <div class="price">$52.99 <span>69.99</span></div>   
+    <a onclick="addToCart(4,1,52.99)" class="btn">add to cart</a>
+</div>
+<div class="box">
+    <img src="img/5.jpg" alt="">
+    <h3>As desired</h3>  
+    <div class="price">$52.99 <span>89.99</span></div>   
+    <a onclick="addToCart(5,1,52.99)" class="btn">add to cart</a>
+</div>
+<div class="box">
+    <img src="img/6.jpg" alt="">
+    <h3>Like a Dream</h3>  
+    <div class="price">$52.99 <span>79.99</span></div>   
+    <a onclick="addToCart(6,1,52.99)" class="btn">add to cart</a>
+</div>
+<div class="box">
+    <img src="img/7.jpg" alt="">
+    <h3>One Angel</h3>  
+    <div class="price">$52.99 <span>69.99</span></div>   
+    <a onclick="addToCart(7,1,52.99)" class="btn">add to cart</a>
+</div>
+<div class="box">
+    <img src="img/8.jpg" alt="">
+    <h3>Has a lot of cuteness</h3>  
+    <div class="price">$52.99 <span>99.99</span></div>   
+    <a onclick="addToCart(8,1,52.99)" class="btn">add to cart</a>
+</div>
+</div>
+</section>
+<!--cakes section ends-->
+<!--pastry section starts-->
+<section class="pastry" id="pastry">
+    <h1 class="heading">our <span>pastry</span></h1>
+    <div class="box-container">
+     <div class="box">
+         <div class="icons">
+             <a onclick="addToCart(9,1,16.99)" class="fas fa-shopping-cart"></a>
+             <a href="#" class="fas fa-heart"></a>
+             <a href="#" class="fas fa-eye"></a>
+         </div>
+         <div class="image">
+             <img src="img/9.jpg" alt="">
+         </div>
+         <div class="content">
+             <h3>Swiss roll</h3>
+             <div class="stars">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star-half-alt"></i>
+             </div>
+             <div class="price">$16.99 <span>$20.99</span></div>
+         </div>
+     </div>
+
+     <div class="box">
+         <div class="icons">
+             <a onclick="addToCart(10,1,15.99)" class="fas fa-shopping-cart"></a>
+             <a href="#" class="fas fa-heart"></a>
+             <a href="#" class="fas fa-eye"></a>
+         </div>
+         <div class="image">
+             <img src="img/10.jpg" alt="">
+         </div>
+         <div class="content">
+             <h3>Sourdough Bread</h3>
+             <div class="stars">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star-half-alt"></i>
+             </div>
+             <div class="price">$15.99 <span>$19.99</span></div>
+         </div>
+     </div>
+     <div class="box">
+        <div class="icons">
+            <a onclick="addToCart(11,1,14.99)" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+            <img src="img/11.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Egg tart</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">$14.99 <span>$18.99</span></div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="icons">
+            <a onclick="addToCart(12,1,13.99)" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+            <img src="img/12.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Bun</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">$13.99 <span>$17.99</span></div>
+        </div>
+    </div>
+</div>
+<!--pastry section ends-->
+      <!--review section starts --> 
+      <section class="review" id="review">
+        <h1 class="heading">customer's <span>review</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="" alt="" class="quote">
+                <p>Their cakes never disappoint! The flavors are always rich and delicious, and the decorations are stunning. The staff is friendly and always ready to help with any special requests. My favorite is their red velvet cake - it's simply divine! I would recommend this cake shop to anyone looking for a sweet treat.</p>
+                <img src="img/chiikawa.png" class="user" alt="">
+                <h3>chiikawa</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="" alt="" class="quote">
+                <p>The variety of flavors and designs is impressive, and they all taste amazing. The customer service is top-notch, and the staff is very accommodating. Whether you're looking for a birthday cake or a special occasion dessert, it is sure to have something that will satisfy your sweet tooth. I'll definitely be coming back!</p>
+                <img src="img/hachiware.png" class="user" alt="">
+                <h3>hachiware</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="" alt="" class="quote">
+                <p>It is a hidden gem! Their cupcakes are beautifully decorated and taste absolutely delicious. I've tried several flavors, and they're all unique and mouth-watering. The atmosphere in the shop is cozy and inviting, making it a great place to grab a quick bite or sit and enjoy a cupcake with a friend. I highly recommend it for anyone who loves sweet treats!</p>
+                <img src="img/usagi.png" class="user" alt="">
+                <h3>usagi</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+      </section>
+
+      <!--review section starts --> 
+<!--contact section starts-->
+<section class="contact" id="contact">
+    <h1 class="heading"><span>contract </span>us</h1>
+    <div class="row">
+        <iframe class="map" src="https://j.map.baidu.com/41/Ov6"
+         allowfullscreen="" loading="lazy"></iframe>
+    <form id="myForm">
+        <h3>get in touch</h3>
+        <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" id="abc_name" name="name" placeholder="name">
+        </div>
+        <div class="inputBox">
+            <span class="fas fa-envelope"></span>
+            <input type="email" id="abc_email" name="email" placeholder="email">
+        </div>
+        <div class="inputBox">
+            <span class="fas fa-phone"></span>
+            <input type="number" id="abc_number" name="number" placeholder="number">
+        </div>
+        <button type="submit" class="btn">Contact Now</button>
+    </form>
+<div class="mes">
+    <div id="message"></div></div>
+
+    </div>
+</section>
+<!--contact section ends-->
+<!--blogs section starts-->
+<section class="blogs" id="blogs">
+    <h1 class="heading">our <span>blogs</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="img/blog1.jpg" alt="">
+
+            </div>
+            <div class="content">
+                <a href="#" class="title">Pumpkin & Chestnut</a>
+                <span>
+                    by Amy / 21st December, 2023
+                </span>
+                <p>The sweetness of chestnuts and pumpkins will turn into the power of happiness.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="img/blog2.jpg" alt="">
+
+            </div>
+            <div class="content">
+                <a href="#" class="title">Magic Pear</a>
+                <span>
+                    by Andy / 21st may, 2024
+                </span>
+                <p>Today I made a lovely pear-shaped cake, which is beautiful and delicious.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="img/blog3.png" alt="">
+
+            </div>
+            <div class="content">
+                <a href="#" class="title">Bow Heart IceCream cake</a>
+                <span>
+                    by Vivia / 1st june, 2024
+                </span>
+                <p>Summer is coming. Is there anything more enjoyable than ice cream?</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--blogs section ends-->
+<!--footer section starts-->
+<section class="footer">
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+    <div class="links">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#cakes">cakes</a>
+        <a href="#pastry">pastry</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="#blogs">blogs</a>
+    </div>
+    <div class="credit">created by<span> 光宗耀组</span></div>
+</section>
+<!--footer section ends-->
+        <!--custom js file link -->
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </body>
+</html>
