@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <mata http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title></title>
+            </mata>
+            <style>
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 10vw;
+    background: url(img/8b5ccdd9bd0da418931a4648144183c.jpg) center;
+    background-size: cover;
+    
+                 
+}
+h1 span{
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    text-shadow: 0vw 0vw 0vw #000;
+    animation: opa 1s linear calc(var(--d) * 1s) forwards;
+
+}
+
+
+@keyframes opa{
+    to{
+        opacity: 1;
+        text-shadow: 0.1vw 0.1vw 0vw #000;
+    }
+}
+            </style>
+            </head>
+            <body>
+                <h1></h1>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+                <script>  
+                $(document).ready(function() {  
+                    var titles = ["EVERYBODY", "WELCOME TO", "OUR Bakery", ""];  
+                    var ind = 0;  
+                    var titleElement = $('h1'); // 获取h1元素  
+                    var intervalId = setInterval(showTitle, 3000); // 设置定时器ID以便后续清除  
+                  
+                    function showTitle() {  
+                        titleElement.empty(); // 清空h1的内容  
+                        var str = titles[ind];  
+                        for (var i in str) {  
+                            var span = $('<span>').text(str[i]); // 创建span元素并设置文本  
+                            span.css('--d', Math.random() + 1); // 设置CSS变量（注意这里可能需要调整或移除，因为CSS变量可能不需要在这里设置）  
+                            titleElement.append(span); // 将span添加到h1中  
+                        }  
+                        ind++;  
+                        ind = ind % titles.length; // 循环回到数组开头  
+                  
+                        // 如果ind再次回到0，说明完成了一次循环，清除定时器并跳转到其他页面  
+                        if (ind === 0) {  
+                            clearInterval(intervalId); // 清除定时器  
+                            window.location.href = '1.html'; // 替换为你想要跳转的页面URL  
+                        }  
+                    }  
+                  
+                    // 首次显示标题  
+                    showTitle();  
+                });  
+                </script>
+            </body>
+</html>
